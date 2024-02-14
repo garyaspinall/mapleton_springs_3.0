@@ -1,0 +1,10 @@
+---
+const {title} = Astro.props;
+const {description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."} = Astro.props;
+---
+
+<div class="border-t py-8">
+    <img src="/fireplace.svg" class="max-h-20 m-auto">
+    <h2 class="">{title}</h2>
+    <p class="">{description}</p>
+</div>

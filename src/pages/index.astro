@@ -1,0 +1,91 @@
+---
+import Navbar from "../components/navbar.astro";
+import AmenityCard from "../components/amenity_card.astro";
+import BookNow from "../components/book_now.astro";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Mapleton Springs B&B</title>
+    </head>
+    <body>
+		<Navbar></Navbar>
+        <img src="/pool_mist.webp" />
+        <section class="p-16">
+            <h1 class="font-bold">Rest, Relax and Rejuvinate</h1><br />
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p><br />
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+            </p><br />
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+            </p><br />
+        </section>
+        <section class="bg-slate-800 text-white p-16 text-center">
+            <h1 class="text-xl">You'll Love...</h1>
+            <AmenityCard title="Swimming Pool" />
+            <AmenityCard title="Hot Tub" />
+            <AmenityCard title="Cinema Room" />
+            <AmenityCard title="Wood Fire" />
+            <AmenityCard title="Barbeque" />
+        </section>
+        <section class="p-16">
+            <img src="king_suite.webp" />
+            <h1>King Suite</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <div>
+                <p>Max Guests - 2</p>
+                <p>High Speed WiFi</p>
+                <p>Bed Size - King</p>
+                <p>Netflix</p>
+                <p>Features...</p><br />
+            </div>
+            <BookNow/>
+        </section>
+        <section class="bg-slate-800 text-white p-16">
+            <h1 class="font-bold">About Mapleton Springs</h1>
+            <p>
+                Overlooking the Sunshine Coast Hinterland, Mapleton Springs is
+                situated on 3.5 acres and surrounded by 200 acres of peaceful
+                reserve. Surrounded by native wildlife including a wide variety
+                of birds (including regular barn owls nesting) and wallabies.
+                Mapleton Springs is 4 minutes from the village of Mapleton, 35
+                minute drive to Australia Zoo and 30 minutes to Eumundi Markets.
+            </p>
+        </section>
+        <section class="p-16">
+            <div class="border-b border-slate-800">
+                <h1 class="font-bold">Address</h1><br />
+                <p>87 Spring Pastures Drive</p>
+                <p>Mapleton QLD 4560</p><br />
+            </div>
+            <div class="border-b border-slate-800">
+                <br /><h1 class="font-bold">Contact</h1><br />
+                <p>mapletonsprings@bigpond.com</p><br />
+            </div>
+            <br /><p class="text-xs">
+                If you have any questions or would like to receive further
+                information, please send us an email and we'd be delighted to
+                help you.
+            </p>
+        </section>
+        <img src="/google_maps_placeholder.png" />
+    </body>
+</html>

@@ -1,0 +1,63 @@
+---
+import BookNow from "../components/book_now.astro";
+import Navbar from "../components/navbar.astro";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Our Rooms - Mapleton Springs B&B</title>
+    </head>
+    <body>
+        <Navbar></Navbar>
+        <img src="/pool_mist.webp" />
+        <section class="p-16">
+            <h1 class="font-bold">Our Rooms</h1><br />
+            <p></p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.
+        </section>
+    </body>
+    <section class="p-16 bg-slate-100">
+        <img src="king_suite.webp" />
+        <h1>King Suite</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+        </p>
+        <div>
+            <p>Max Guests - 2</p>
+            <p>High Speed WiFi</p>
+            <p>Bed Size - King</p>
+            <p>Netflix</p>
+            <p>Features...</p><br />
+            <BookNow/>
+        </div>
+        
+    </section>
+    <section class="p-16">
+        <img src="king_suite.webp" />
+        <h1>2nd King Suite</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+        </p>
+        <div>
+            <p>Max Guests - 2</p>
+            <p>High Speed WiFi</p>
+            <p>Bed Size - King</p>
+            <p>Netflix</p>
+            <p>Features...</p><br />
+            <BookNow/>
+        </div>
+        
+    </section>
+</html>
