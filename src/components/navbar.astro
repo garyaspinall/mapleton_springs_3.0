@@ -2,15 +2,15 @@
 import Drawer from "../components/drawer.astro";
 ---
 
-<nav class="w-full z-10 h-24 absolute">
+<nav id="navbar" class="w-full z-10 h-24 absolute">
     <Drawer />
-    <div class="bg-slate-800 opacity-30 w-full h-full absolute"></div>
+    <div id="navbarBackground" class="bg-slate-800 w-full h-full absolute opacity-30"></div>
     <div class="flex items-center h-full px-8 justify-between">
         <img src="/hamburger.svg" id="hamburgerButton" class="z-20 h-10" />
         <a href="index.html" class="h-3/5 z-20">
             <img src="brand_logo_nobg.png" class="h-full" />
         </a>
-        <a href="https://book-directonline.com/properties/mapletonspringsdirect" class="z-20">Book Now</a>
+        <a href="https://book-directonline.com/properties/mapletonspringsdirect" class="z-20 bg-slate-800 text-white p-2 shadow-xl font-bold">Book Now</a>
     </div>
 </nav>
 
@@ -23,4 +23,27 @@ import Drawer from "../components/drawer.astro";
     }
 
     hamburgerButton.addEventListener("click", openDrawer);
+
+    const navbar = document.getElementById("navbar");
+    const navbarBackground = document.getElementById("navbarBackground");
+
+    document.addEventListener("scroll", scrollCheck);
+
+    function scrollCheck() {
+        if (scrollY != 0) {
+            navbar.classList.remove("absolute");
+            navbar.classList.add("fixed");
+            navbarBackground.classList.remove("opacity-30");
+        }
+        if (scrollY == 0) {
+            navbar.classList.remove("fixed");
+            navbar.classList.add("absolute");
+            navbarBackground.classList.add("opacity-30");
+        }
+        // CLOSE DRAWER ON SCROLL
+        if (!drawer.classList.contains("-translate-x-60")) {
+            drawer.classList.add("-translate-x-60")
+        }
+    }
+
 </script>
