@@ -1,16 +1,49 @@
 ---
 import Navbar from "../components/navbar.astro";
+import Footer from "../components/footer.astro";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reviews - Mapleton Springs B&B</title>
-</head>
-<body>
-    <Navbar></Navbar>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Reviews - Mapleton Springs B&B</title>
+    </head>
+    <body>
+        <Navbar />
+        <img src="pool_mist.webp" />
+        <h1 class="font-bold p-16">Reviews</h1>
+        <img src="/review_widget_placeholder.png" class="m-auto">
+        <section class="p-16">
+            
+            <img src="sunrise_mist.png" />
+            <p>
+                "If you're considering booking here, and a beautiful few days is
+                what you're chasing, then just book... You will not be
+                disappointed I promise."
+            </p>
+            <cite class="">Kevin C, Trip Advisor</cite>
+        </section>
+        <section class="p-16 bg-slate-100">
+            <img src="review1_photo.webp" />
+            <p>
+                "If you're considering booking here, and a beautiful few days is
+                what you're chasing, then just book... You will not be disappointed
+                I promise."
+            </p>
+            <cite class="">Kevin C, Trip Advisor</cite>
+        </section>
+        <section class="p-16">
+            <img src="review1_photo.webp" />
+            <p>
+                "If you're considering booking here, and a beautiful few days is
+                what you're chasing, then just book... You will not be disappointed
+                I promise."
+            </p>
+            <cite class="">Kevin C, Trip Advisor</cite>
+        </section>
+
+        <Footer />
+    </body>
 </html>
