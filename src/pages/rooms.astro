@@ -1,7 +1,9 @@
 ---
-import BookNow from "../components/book_now.astro";
 import Navbar from "../components/navbar.astro";
 import Footer from "../components/footer.astro";
+import KingSuite from "../components/king_suite.astro";
+import KingSuiteSpa from "../components/king_suite_spa.astro";
+import '../styles/styles.css';
 ---
 
 <!doctype html>
@@ -14,7 +16,7 @@ import Footer from "../components/footer.astro";
     <body>
         <Navbar></Navbar>
         <img src="/pool_mist.webp" />
-        <section class="p-16">
+        <section class="">
             <h1 class="font-bold">Our Rooms</h1><br />
             <p></p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -23,43 +25,16 @@ import Footer from "../components/footer.astro";
             ea commodo consequat.
         </section>
     </body>
-    <section class="p-16 bg-slate-100">
-        <img src="king_suite.webp" />
-        <h1>King Suite</h1>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-        </p>
-        <div>
-            <p>Max Guests - 2</p>
-            <p>High Speed WiFi</p>
-            <p>Bed Size - King</p>
-            <p>Netflix</p>
-            <p>Features...</p><br />
-            <BookNow/>
-        </div>
-        
+    <section class="bg-slate-100">
+        <KingSuite />
+        <script>
+            const kingSuite = document.getElementById("slide1");
+            kingSuite.classList.remove("absolute","bg-white");
+        </script>
     </section>
-    <section class="p-16">
-        <img src="king_suite.webp" />
-        <h1>2nd King Suite</h1>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-        </p>
-        <div>
-            <p>Max Guests - 2</p>
-            <p>High Speed WiFi</p>
-            <p>Bed Size - King</p>
-            <p>Netflix</p>
-            <p>Features...</p><br />
-            <BookNow/>
-        </div>
-        
+    <section class="">
+        <KingSuiteSpa />
+
     </section>
     <Footer></Footer>
 </html>

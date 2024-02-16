@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+
+* {
+    font-family: "Tenor Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p {
+    font-size: 20px;
+}
+
+h1 {
+    letter-spacing: 0.025em;
+}
+
+section {
+    padding: 4rem;
+}
+@media (min-width: 1280px) {
+    section {
+        padding-left: 24rem/* 384px */;
+        padding-right: 24rem/* 384px */;
+    }
+}

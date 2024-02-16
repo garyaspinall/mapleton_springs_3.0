@@ -1,8 +1,10 @@
 ---
 import Navbar from "../components/navbar.astro";
 import AmenityCard from "../components/amenity_card.astro";
-import BookNow from "../components/book_now.astro";
 import Footer from "../components/footer.astro";
+import KingSuite from "../components/king_suite.astro";
+import KingSuiteSpa from "../components/king_suite_spa.astro";
+import "../styles/styles.css";
 ---
 
 <html lang="en">
@@ -11,13 +13,14 @@ import Footer from "../components/footer.astro";
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>Mapleton Springs B&B</title>
-        <script src="../components/initMap.js"></script>
+        <script src="../scripts/initMap.js"></script>
     </head>
     <body>
         <Navbar />
-        <img src="/pool_mist.webp" />
-        <section class="p-16">
-            <h1 class="font-bold">Rest, Relax and Rejuvinate</h1><br />
+        <div class="max-h-screen overflow-hidden"><img src="/pool.webp" /></div>
+        <section>
+            <p class="text-sm font-semibold tracking-widest">REST, RELAX AND REJUVINATE</p><br /><br>
+            <h1 class="font-bold text-2xl text-slate-800">Mapleton Springs Bed and Breakfast</h1><br>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -35,7 +38,7 @@ import Footer from "../components/footer.astro";
                 nisi ut aliquip ex ea commodo consequat.
             </p><br />
         </section>
-        <section class="bg-slate-800 text-white p-16 text-center">
+        <section class="bg-slate-800 text-white text-center xl:px-96">
             <h1 class="text-xl">You'll Love...</h1>
             <AmenityCard title="Swimming Pool" />
             <AmenityCard title="Hot Tub" />
@@ -43,25 +46,31 @@ import Footer from "../components/footer.astro";
             <AmenityCard title="Wood Fire" />
             <AmenityCard title="Barbeque" />
         </section>
-        <section class="p-16">
-            <img src="king_suite.webp" />
-            <h1>King Suite</h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <div>
-                <p>Max Guests - 2</p>
-                <p>High Speed WiFi</p>
-                <p>Bed Size - King</p>
-                <p>Netflix</p>
-                <p>Features...</p><br />
-            </div>
-            <BookNow />
+        <section class="">
+            <div id="carousel" class="relative overflow-hidden h-carousel m-auto max-w-xl"><KingSuiteSpa /><KingSuite /></div>
+            <script>
+                const slide1 = document.getElementById("slide1");
+                const slide2 = document.getElementById("slide2");
+                slide1.classList.add("absolute","bg-white", "duration-700", "transition");
+                slide2.classList.add("transition", "duration-700", "absolute", "translate-x-full", "bg-white")
+                function cycleSlides() {
+                    if (slide1.classList.contains("translate-x-full")) {
+                        slide1.classList.remove("translate-x-full")
+                    }
+                    else {
+                        slide1.classList.add("translate-x-full")
+                    }
+                    if (slide2.classList.contains("translate-x-full")) {
+                        slide2.classList.remove("translate-x-full")
+                    }
+                    else {
+                        slide2.classList.add("translate-x-full")
+                    }
+                }
+                window.setInterval(cycleSlides, 5000);
+            </script>
         </section>
-        <section class="bg-slate-800 text-white p-16">
+        <section class="bg-slate-800 text-white">
             <h1 class="font-bold">About Mapleton Springs</h1>
             <p>
                 Overlooking the Sunshine Coast Hinterland, Mapleton Springs is
@@ -72,7 +81,7 @@ import Footer from "../components/footer.astro";
                 minute drive to Australia Zoo and 30 minutes to Eumundi Markets.
             </p>
         </section>
-        <section class="p-16">
+        <section class="">
             <div class="border-b border-slate-800">
                 <h1 class="font-bold">Address</h1><br />
                 <p>87 Spring Pastures Drive</p>
@@ -88,7 +97,7 @@ import Footer from "../components/footer.astro";
                 help you.
             </p>
         </section>
-        <div id="map" class="h-96"></div>
+        <div id="map" class="h-96 xl:mx-96"></div><br />
         <script>
             //prettier-ignore
             (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
