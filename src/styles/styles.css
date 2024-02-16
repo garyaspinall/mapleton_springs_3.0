@@ -6,12 +6,17 @@
     font-style: normal;
 }
 
-p {
-    font-size: 20px;
-}
-
 h1 {
     letter-spacing: 0.025em;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: #1e293b;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.75rem;
 }
 
 section {
