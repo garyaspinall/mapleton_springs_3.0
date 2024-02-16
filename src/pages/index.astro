@@ -19,8 +19,12 @@ import "../styles/styles.css";
         <Navbar />
         <div class="max-h-screen overflow-hidden"><img src="/pool.webp" /></div>
         <section>
-            <p class="text-sm font-semibold tracking-widest">REST, RELAX AND REJUVINATE</p><br /><br>
-            <h1 class="font-bold text-2xl text-slate-800">Mapleton Springs Bed and Breakfast</h1><br>
+            <p class="text-sm font-semibold tracking-widest">
+                REST, RELAX AND REJUVINATE
+            </p><br /><br />
+            <h1 class="">
+                Mapleton Springs Bed and Breakfast
+            </h1><br />
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -39,40 +43,54 @@ import "../styles/styles.css";
             </p><br />
         </section>
         <section class="bg-slate-800 text-white text-center xl:px-96">
-            <h1 class="text-xl">You'll Love...</h1>
-            <AmenityCard title="Swimming Pool" />
-            <AmenityCard title="Hot Tub" />
-            <AmenityCard title="Cinema Room" />
-            <AmenityCard title="Wood Fire" />
-            <AmenityCard title="Barbeque" />
+            <h1 class="text-white">You'll Love Our...</h1><br>
+            <AmenityCard title="Swimming Pool"><img src="/pool.svg" class="h-16 m-auto opacity-70"></AmenityCard>
+            <AmenityCard title="Hot Tub"><img src="/hot_tub.svg" class="h-16 m-auto opacity-70"></AmenityCard>
+            <AmenityCard title="Cinema Room"><img src="/cinema.svg" class="h-16 m-auto opacity-70"></AmenityCard>
+            <AmenityCard title="Wood Fire"><img src="/fireplace.svg" class="h-16 m-auto opacity-70"></AmenityCard>
+            <AmenityCard title="Barbeque"><img src="/bbq.svg" class="h-16 m-auto opacity-70"></AmenityCard>
         </section>
         <section class="">
-            <div id="carousel" class="relative overflow-hidden h-carousel m-auto max-w-xl"><KingSuiteSpa /><KingSuite /></div>
+            <div
+                id="carousel"
+                class="relative overflow-hidden h-carousel m-auto max-w-xl"
+            >
+                <KingSuiteSpa /><KingSuite />
+            </div>
             <script>
                 const slide1 = document.getElementById("slide1");
                 const slide2 = document.getElementById("slide2");
-                slide1.classList.add("absolute","bg-white", "duration-700", "transition");
-                slide2.classList.add("transition", "duration-700", "absolute", "translate-x-full", "bg-white")
+                slide1.classList.add(
+                    "absolute",
+                    "bg-white",
+                    "duration-700",
+                    "transition"
+                );
+                slide2.classList.add(
+                    "transition",
+                    "duration-700",
+                    "absolute",
+                    "translate-x-full",
+                    "bg-white"
+                );
                 function cycleSlides() {
                     if (slide1.classList.contains("translate-x-full")) {
-                        slide1.classList.remove("translate-x-full")
-                    }
-                    else {
-                        slide1.classList.add("translate-x-full")
+                        slide1.classList.remove("translate-x-full");
+                    } else {
+                        slide1.classList.add("translate-x-full");
                     }
                     if (slide2.classList.contains("translate-x-full")) {
-                        slide2.classList.remove("translate-x-full")
-                    }
-                    else {
-                        slide2.classList.add("translate-x-full")
+                        slide2.classList.remove("translate-x-full");
+                    } else {
+                        slide2.classList.add("translate-x-full");
                     }
                 }
                 window.setInterval(cycleSlides, 5000);
             </script>
         </section>
         <section class="bg-slate-800 text-white">
-            <h1 class="font-bold">About Mapleton Springs</h1>
-            <p>
+            <h1 class="text-white">About Mapleton Springs</h1><br>
+            <p class="opacity-70">
                 Overlooking the Sunshine Coast Hinterland, Mapleton Springs is
                 situated on 3.5 acres and surrounded by 200 acres of peaceful
                 reserve. Surrounded by native wildlife including a wide variety
@@ -83,12 +101,12 @@ import "../styles/styles.css";
         </section>
         <section class="">
             <div class="border-b border-slate-800">
-                <h1 class="font-bold">Address</h1><br />
+                <h1 class="">Address</h1><br />
                 <p>87 Spring Pastures Drive</p>
                 <p>Mapleton QLD 4560</p><br />
             </div>
             <div class="border-b border-slate-800">
-                <br /><h1 class="font-bold">Contact</h1><br />
+                <br /><h1 class="">Contact</h1><br />
                 <p>mapletonsprings@bigpond.com</p><br />
             </div>
             <br /><p class="text-xs">
