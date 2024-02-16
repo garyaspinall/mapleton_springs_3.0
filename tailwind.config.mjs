@@ -4,7 +4,7 @@ export default {
 	theme: {
 		extend: {
 			spacing: {
-				carousel: 840,
+				carousel: 900,
 			}
 		},
 	},
