@@ -2,7 +2,7 @@
 import Drawer from "../components/drawer.astro";
 ---
 
-<nav id="navbar" class="w-full z-20 h-24 absolute bg-slate-800 bg-opacity-30">
+<nav id="navbar" class="w-full z-20 h-24 absolute bg-slate-800 bg-opacity-50">
     <Drawer />
     <div class="flex items-center h-full px-8 justify-between">
         <img src="/hamburger.svg" id="hamburgerButton" class="h-10" />
@@ -31,12 +31,12 @@ import Drawer from "../components/drawer.astro";
         if (scrollY != 0) {
             navbar.classList.remove("absolute");
             navbar.classList.add("fixed");
-            navbar.classList.remove("bg-opacity-30");
+            navbar.classList.remove("bg-opacity-50");
         }
         if (scrollY == 0) {
             navbar.classList.remove("fixed");
             navbar.classList.add("absolute");
-            navbar.classList.add("bg-opacity-30");
+            navbar.classList.add("bg-opacity-50");
         }
         // CLOSE DRAWER ON SCROLL
         if (!drawer.classList.contains("-translate-x-60")) {
