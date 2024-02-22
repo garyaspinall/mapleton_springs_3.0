@@ -12,13 +12,18 @@
     </div>
 </div>
 
+<div id="slideout-mask" class="fixed bg-black opacity-50 h-screen w-screen hidden"></div>
+
 <script>
     const exitButton = document.getElementById("exitButton");
     const drawer = document.getElementById("drawer");
+    const slideoutMask = document.getElementById("slideout-mask");
 
     function closeDrawer() {
         drawer.classList.add('-translate-x-60');
+        slideoutMask.classList.add("hidden");
     }
 
     exitButton.addEventListener("click", closeDrawer);
+    slideoutMask.addEventListener("click", closeDrawer);
 </script>

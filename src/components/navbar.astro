@@ -16,14 +16,20 @@ import Drawer from "../components/drawer.astro";
 <script>
     const hamburgerButton = document.getElementById("hamburgerButton");
     const drawer = document.getElementById("drawer");
+    const slideoutMask = document.getElementById("slideout-mask");
+    const navbar = document.getElementById("navbar");
 
     function openDrawer() {
         drawer.classList.remove("-translate-x-60");
+        slideoutMask.classList.remove("hidden");
     }
-
+    
     hamburgerButton.addEventListener("click", openDrawer);
 
-    const navbar = document.getElementById("navbar");
+    function closeDrawer() {
+        drawer.classList.add('-translate-x-60');
+        slideoutMask.classList.add("hidden");
+    }
 
     document.addEventListener("scroll", scrollCheck);
 
@@ -40,7 +46,7 @@ import Drawer from "../components/drawer.astro";
         }
         // CLOSE DRAWER ON SCROLL
         if (!drawer.classList.contains("-translate-x-60")) {
-            drawer.classList.add("-translate-x-60")
+            closeDrawer();
         }
     }
 
