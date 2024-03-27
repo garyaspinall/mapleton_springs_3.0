@@ -49,10 +49,16 @@ import "../styles/styles.css";
             <AmenityCard title="Swimming Pool">
                 <img src="/pool.svg" class="h-16 m-auto opacity-70" />
             </AmenityCard>
-            <AmenityCard title="Hot Tub">
+            <AmenityCard
+                title="Hot Tub"
+                description="Careful of this one: the cool breeze and clear starry skies of the hinterland makes leaving our spa a challenge!"
+            >
                 <img src="/hot_tub.svg" class="h-16 m-auto opacity-70" />
             </AmenityCard>
-            <AmenityCard title="Cinema Room">
+            <AmenityCard
+                title="Cinema Room"
+                description="Fully blacked-out with an immersive sound system, our cinema room has streaming services, live TV and an XBox all available."
+            >
                 <img src="/cinema.svg" class="h-16 m-auto opacity-70" />
             </AmenityCard>
             <AmenityCard title="Wood Fire">
@@ -76,14 +82,14 @@ import "../styles/styles.css";
                     "absolute",
                     "bg-white",
                     "duration-700",
-                    "transition"
+                    "transition",
                 );
                 slide2.classList.add(
                     "transition",
                     "duration-700",
                     "absolute",
                     "translate-x-full",
-                    "bg-white"
+                    "bg-white",
                 );
                 function cycleSlides() {
                     if (slide1.classList.contains("translate-x-full")) {
